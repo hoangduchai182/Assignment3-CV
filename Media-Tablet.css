@@ -1,0 +1,173 @@
+@media screen and (max-width: 780px) {
+  section .container {
+    max-width: 780px;
+  }
+  /* Chia lại vh của ảnh */
+  #banner {
+    height: 70vh;
+  }
+  /* Navbar */
+  #nav-bar .container {
+    max-width: 460px;
+  }
+  /* Tắt hình ảnh avartar */
+  .default-avatar {
+    display: none;
+  }
+  /* Giảm độ rộng của vùng chứa tên hoặc avartar */
+  .nav-content {
+    flex-basis: 50px;
+  }
+
+  /*Mục tiêu nghề nghiệp  */
+  /* Chỉnh lại pading so cho phù hợp với thiết kế */
+  #target,
+  #personal-info {
+    padding: 60px 20px 40px 20px;
+  }
+
+  /* Thông tin nghề nghiệp */
+  /* Loại bỏ grid và chia các ô theo cột */
+  #job-info .container {
+    max-width: 600px;
+    display: block;
+    column-count: 2;
+    column-gap: 30px;
+  }
+  /* Đặt lại chiều rộng cho các ô đồng thời dùng break-inside cho
+  các ô liền kề nhau giống với thiết kế */
+  .job-section {
+    width: 245px;
+    break-inside: avoid;
+    padding-bottom: 50px;
+  }
+  /* Chỉnh lại các từ như Kinh nghiệm, Hoạt động, Học vấn,...
+  so cho giống thiết kế */
+  .job-title h1 {
+    font-size: 24px;
+    margin-top: 55px;
+  }
+  /* Chỉnh lại margin top của ô đầu tiên */
+  .job-1 {
+    margin-top: 0;
+  }
+  /* Chỉnh lại vị trí dấu chấm xanh thứ 2 của ô Kinh nghiệm */
+  .job-ex-2::after {
+    top: 222px;
+  }
+  /* Chỉnh lại vị trí dấu chấm xanh thứ 2 của ô Hoạt Động */
+  .job-acti-2::after {
+    top: 112px;
+  }
+  /* Đưa các icon của ô Sở thích xuống dòng */
+  .job-4 .job-icon {
+    flex-wrap: wrap;
+  }
+
+  /* Chứng chỉ giải thưởng */
+  /* Chỉnh lại từ Chứng chỉ giải thưởng sao cho giống với thiết kế */
+  #certificate .section-title {
+    font-size: 28px;
+    margin-left: -10px;
+  }
+  /* Chia lại thành 2 cột 2 hàng */
+  .job-certi {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  /* Căn dọc nội dung các ô */
+  .job-certi-content {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 20px;
+  }
+  /* Chỉnh lại cao rộng của 3 hình ảnh giải thưởng */
+  .job-certi-content img {
+    height: 65%;
+    width: 100%;
+  }
+  /* Căn lại chiều rộng của nội dung các ô sao cho giống với thiết kế */
+  .certi-1 div,
+  .certi-2 div,
+  .certi-3 div {
+    width: 60%;
+  }
+  /* Căn thêm padding sao cho hình 1 và 3 giống với hình 2 */
+  .certi-1 img,
+  .certi-3 img {
+    padding-right: 10px;
+  }
+  /* Căn chỉnh các dòng chữ "Chứng chỉ Lập Trình ..." sao cho giống với
+  thiết kế */
+  .reward {
+    color: #000000b0;
+    margin-bottom: 10px;
+  }
+  /* Kẻ thêm border giữa hình 1 và 2 (Bài Assignment 2 em đã kẻ border
+  cho hình ảnh, giờ em chỉ kẻ thêm cho nội dung) */
+  .certi-2 div {
+    border-left: 1px solid #d6c08d;
+    padding-left: 10px;
+  }
+  /* Chỉnh lại padding ô thứ 3 sao cho giống với thiết kế */
+  .certi-3 {
+    padding-top: 40px;
+  }
+
+  /* Dự án */
+  /* Chỉnh lại margin từ Dự án */
+  #project .section-title {
+    margin-left: -10px;
+  }
+  /* Căn lại chiều rộng của 3 ô, đồng thời đưa về bên trái để thẳng hàng
+  với từ Dự Án */
+  .project-content {
+    grid-template-columns: repeat(3, 28%);
+    gap: 30px;
+    justify-content: left;
+    padding-left: 40px;
+  }
+  /* Chỉnh lại kích cỡ của 3 hình ảnh */
+  .pro-con img {
+    width: 100%;
+    height: 20%;
+  }
+  /* Vì đoạn 2 dài hơn đoạn 1 và 3 nên em chỉnh cao ô cuối cùng của 2 đoạn
+  1 và 3 sao cho bằng với đoạn 2  */
+  .tr-bot-1 {
+    height: 100px;
+  }
+  .tr-bot-3 {
+    height: 85px;
+  }
+  /* Chỉnh lại vị trí từ Công nghệ trong đoạn 1 và 3 */
+  .td-bot {
+    width: 25%;
+  }
+  /* Chỉnh lại vị trí từ HTML,CSS của hàng Công nghệ trong đoạn 1 và 3 */
+  .tr-bot-1 td:last-child,
+  .tr-bot-3 td:last-child {
+    left: 48px;
+  }
+  /* Đưa từ 2023 lên trên giống với thiết kế */
+  .proj-skill {
+    align-items: flex-start;
+  }
+  /* Chỉnh lại kích cỡ của icon */
+  .project-icon i {
+    font-size: 16px;
+  }
+  /* Căn dọc nội dung của các mục icon FUNiX, Developer */
+  .project-icon {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  /* Chỉnh lại khoảng cách giữa 3 nội dung và kích cỡ icon */
+  #footer .container {
+    gap: 20px;
+  }
+  .link-icon i {
+    font-size: 120%;
+  }
+}

@@ -1,0 +1,177 @@
+@media screen and (max-width: 340px) {
+  section .container {
+    max-width: 480px;
+  }
+  /* Chỉnh lại độ cao hình ảnh sao cho giống với thiết kế */
+  #banner {
+    height: 80vh;
+  }
+  /* Chỉnh lại kích cỡ Tên trên hình ảnh */
+  #banner h1 {
+    font-size: 38px;
+  }
+
+  /* Navbar */
+  /* Căn dọc Navbar và chỉnh margin */
+  #nav-bar .container {
+    max-width: 115px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 20px;
+  }
+  /* Loại bỏ Border của các item trong navbar */
+  .nav {
+    border: none;
+    padding: 10px 20px;
+  }
+  /* Loại bỏ ô chứa tên hoặc hình ảnh avatar */
+  .nav-content {
+    display: none;
+  }
+
+  /* Mục tiêu nghề nghiệp */
+  /* Chỉnh lại thành 1 cột */
+  #about .container {
+    grid-template-columns: 1fr;
+  }
+  /* Chỉnh lại padding sao cho giống với thiết kế */
+  #target,
+  #personal-info {
+    padding: 60px 10px 40px 20px;
+  }
+
+  /* Thông tin nghề nghiệp */
+  /* Chỉnh lại độ rộng và căn thành 1 cột */
+  #job-info .container {
+    max-width: 340px;
+    column-count: 1;
+    margin-left: 5px;
+    padding: 30px 0;
+  }
+  /* Căn độ rộng phù hợp cho các ô */
+  .job-section {
+    width: 300px;
+  }
+  /* Căn margin nội dung cho 3 ô Kinh nghiệm, Hoạt động, Học vấn */
+  .job-ex,
+  .job-acti,
+  .job-edu {
+    margin: 0 50px;
+  }
+  /* Căn margin nội dung cho 3 ô Kĩ năng, Ngôn ngữ, Sở thích */
+  .job-skill,
+  .job-language,
+  .job-hob {
+    margin: 0 30px;
+  }
+  /* Chỉnh lại vị trí của dấu chấm xanh thứ 2 trong ô Kinh nghiệm */
+  .job-ex-2::after {
+    top: 176px;
+  }
+  /* Thêm Margin các từ Kinh nghiệm, Hoạt động,... */
+  .job-title h1 {
+    margin-left: 30px;
+  }
+  /* Lùi các icon xuống dưới sao cho giống với thiết kế */
+  .job-title i {
+    margin-top: 45px;
+  }
+  /* Chỉnh sang bên phải của tất cả 6 dấu chấm xanh 3 ô Kinh nghiệm,
+  Hoạt Động, Học Vấn */
+  .all-job::after {
+    left: -26px;
+  }
+  /* Chứng chỉ giải thưởng */
+  /* Chỉnh lại từ Chứng chỉ giải thưởng sao cho giống với thiết kế */
+  #certificate .container {
+    width: 95%;
+    margin-left: -10px;
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+  /* Chia thành 1 cột 3 hàng */
+  .job-certi {
+    grid-template-columns: 250px;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  /* Đặt lại chiều cao của hình ảnh thứ nhất */
+  .certi-1 img {
+    height: 55%;
+    padding: 0;
+  }
+  /* Loại bỏ Border ngăn cách ô 1 và 2 */
+  .certi-2 img,
+  .certi-2 div {
+    padding-left: 0;
+    border: none;
+  }
+  /* Căn lại độ rộng nội dung sao cho giống với thiết kế */
+  .certi-1 div,
+  .certi-2 div,
+  .certi-3 div {
+    width: 100%;
+  }
+  /* Căn giữa nội dung ô thứ nhất */
+  .certi-1 {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+  /* Thêm padding ô thứ 2 và 3 sao cho giống với thiết kế */
+  .certi-2,
+  .certi-3 {
+    padding-top: 40px;
+  }
+  /* Thêm padding bottom ô thứ 3 */
+  .certi-3 {
+    padding-bottom: 50px;
+  }
+
+  /* Dự án */
+  /* Chỉnh lại từ Dự Án sao cho giống với thiết kế */
+  #project .container {
+    font-size: 24px;
+    margin: 50px auto 50px 0;
+  }
+  /* Chia làm 1 cột 3 hàng */
+  .project-content {
+    grid-template-columns: 0.9fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  /* Căn dọc nội dung trong 3 ô 2023 FUNix Developer */
+  .proj-skill {
+    flex-direction: column;
+  }
+  /* Vì ở bên trên em căn chỉnh nội dung cột 1 và 3 sao cho bằng
+  với cột 2, giờ đã không cần nên em tắt position và chỉnh lại chiều cao
+  ban đầu */
+  .tr-bot-1,
+  .tr-bot-3 {
+    position: unset;
+    height: 100%;
+  }
+  /* Chỉnh lại từ Công Nghệ */
+  .td-bot {
+    width: 25%;
+    position: unset;
+  }
+  /* Chỉnh lại từ HTML, CSS */
+  .tr-bot-1 td:last-child,
+  .tr-bot-3 td:last-child {
+    width: 75%;
+    position: unset;
+  }
+
+  /* Footer */
+  #footer .container {
+    width: 200px;
+  }
+  /* Làm mất nội dung chỉ để lại icon và để tăng kích cỡ icon theo thiết kế */
+  .link-icon p {
+    display: none;
+  }
+  .link-icon i {
+    font-size: 150%;
+  }
+}

@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-grey {
+  background-color: #f7f7f7;
+}
+.flex {
+  display: flex;
+}
+/* Thiết lập font chữ và cỡ chữ */
+body {
+  font-family: sans-serif;
+  color: #808080;
+  font-size: 12px;
+}
+section > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+  padding: 30px 50px;
+}
+/* Thêm, chỉnh sửa hình ảnh background và chỉnh màu chữ */
+#banner {
+  background-image: linear-gradient(#22222299, #22222299),
+    url(images/banner.jpg);
+  background-position-x: center;
+  height: 60vh;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+/* Chỉnh tên và công việc trên hình ảnh */
+.banner-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  text-align: center;
+}
+/* Chỉnh cỡ chữ của tên */
+#banner h1 {
+  font-size: 48px;
+  font-weight: 200;
+}
+/* Chỉnh cỡ chữ của công việc */
+.banner-content span {
+  font-size: 12px;
+  font-weight: 100;
+}
+/* Chỉnh vị trí hình ảnh default avatar */
+.default-avatar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 7px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, 70%);
+  box-shadow: 0px 0px 5px #0000002a;
+}
+
+/* Thanh nav-bar */
+/* Căn chỉnh các item thành 1 hàng */
+#nav-bar {
+  border-bottom: 2px solid #0000001a;
+  border-collapse: collapse;
+}
+#nav-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+  padding: 0;
+  max-width: 860px;
+}
+/* Loại bỏ dấu gạch chân trên thẻ a */
+#nav-bar .container a:link,
+#nav-bar .container a:visited {
+  text-decoration: none;
+}
+/* Thêm border chỉnh padding và cỡ chữ trong các item */
+.nav {
+  border: 1px solid #0000001a;
+  padding: 15px 20px;
+  font-size: 12px;
+}
+/* Đây là khoảng trống em thêm vào để chứa hình ảnh  */
+.nav-content {
+  border: 1px solid #0000001a;
+  align-self: stretch;
+  flex-basis: 350px;
+}
+/* Chỉnh màu icon của thanh nav-bar, tiện thể em chỉnh thêm của
+mục thông tin cá nhân bên dưới */
+.nav i,
+#personal-info i {
+  color: #0096ff;
+}
+
+/* Bảng thông tin cá nhân */
+/* Chia mục thành 2 cột bằng nhau */
+#about .container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0;
+  width: 100%;
+}
+/* Chỉnh sửa padding 2 mục Mục tiêu nghêf nghiệp và
+thông tin cá nhân */
+#target,
+#personal-info {
+  padding: 60px 40px 40px 40px;
+}
+/* Chỉnh sửa 2 dòng h1 theo đúng thiết kế */
+#about h1 {
+  padding-bottom: 20px;
+  color: #3f3f3f;
+  font-weight: 100;
+}
+/* chỉnh sửa cỡ chữ và cách dòng của nội dung */
+#target p,
+.mt-40 {
+  font-size: 12px;
+  line-height: 1.5;
+}
+/* In đậm và chỉnh màu nội dung như Giới tính ngày sinh điện thoại... 
+theo đúng thiết kế */
+#personal-info span {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+/* chỉnh padding và background của mục bên phải theo đúng thiết kế */
+#personal-info {
+  padding-left: 40px;
+  background-color: #8080800c;
+}
+/* loại bỏ dấu chấm của thẻ Li và chỉnh margin theo đúng thiết kế */
+.mt-40 {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+/* Chỉnh khoảng cách giữa các thẻ Li */
+.mt-40 li {
+  margin-bottom: 5px;
+}
+
+/* Bảng công việc */
+/* Chia thành 3 cột và 2 dòng và chỉnh sửa theo thiết kế */
+#job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(2, 450px);
+  column-gap: 20px;
+  justify-content: center;
+}
+/* Kẻ border và chỉnh khoảng cách trên top của 6 item */
+.job-section {
+  border: 1px solid #0000001a;
+  margin-top: 20px;
+}
+.job-2 {
+  grid-column: 2 / 3;
+  grid-row: 1/2;
+}
+.job-3 {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+}
+.job-4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+}
+.job-5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / -1;
+}
+.job-6 {
+  grid-column: 3 / -1;
+}
+/* Chỉnh sửa khoảng cách giữa thẻ h1 và icon trong 6 item */
+.job-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+/* Chỉnh cỡ chữ h1 của cả 6 item theo đúng thiết kế */
+.job-title h1 {
+  font-size: 22px;
+  font-weight: 100;
+  color: #3f3f3f;
+  margin: 30px 0 0 20px;
+}
+/* Chỉnh cỡ và khoảng cách của icon trong 6 item */
+.job-title i {
+  font-size: 35px;
+  margin: 20px 40px 0 0;
+}
+/* Chỉnh cỡ chữ, cách dòng và căn chia khoảng cách của nội dung
+trong 6 item theo thiết kế */
+.job-content {
+  margin: 0 40px;
+  font-size: 12px;
+  line-height: 1.3;
+}
+/* Chỉnh dòng thời gian của item Kinh nghiệm để chuẩn bị cho việc
+chỉnh sửa chữ "Hiện tại" */
+.time-now {
+  display: flex;
+  font-style: italic;
+}
+/* Chỉnh sửa chữ Hiện tại theo đúng thiết kế */
+.now {
+  background-color: #199cdb;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+/* Chỉnh sủa margin của các chữ thời gian trên 6 item 
+sao cho có cách dòng theo đúng thiết kế*/
+.all-job .time {
+  margin: 25px 0 5px 0;
+}
+/* Loại bỏ dấu chấm đầu dòng của các thẻ Li trong cả 6 item*/
+.job-content ul {
+  list-style-type: none;
+}
+/* Chỉ định vị trí các dấu chấm xanh chuẩn bị được thêm vào
+đầu dòng của 3 item kinh nghiệm, học vấn, hoạt động */
+.job-ex,
+.job-edu,
+.job-acti {
+  position: relative;
+}
+/* Thêm dấu chấm xanh vào đầu dòng 3 item kinh nghiệm, học vấn, hoạt động */
+.all-job::after {
+  content: "";
+  background-color: #0096ff;
+  border-radius: 50%;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: -23px;
+}
+/* Chỉnh vị trí 3 dấu chấm xanh đầu tiền của 3 item */
+.job-ex-1::after,
+.job-edu-1::after,
+.job-acti-1::after {
+  top: 4px;
+}
+/* chỉnh vị trí dấu chấm xanh thứ 2 của item kinh nghiệm */
+.job-ex-2::after {
+  top: 176px;
+}
+/* chỉnh vị trí dấu chấm xanh thứ 2 của item học vấn */
+.job-edu-2::after {
+  top: 112px;
+}
+/* chỉnh vị trí dấu chấm xanh thứ 2 của item hoạt động */
+.job-acti-2::after {
+  top: 98px;
+}
+/* Căn chỉnh margin của icon và nội dung của thẻ Sở thích
+sao cho đúng thiết kế */
+.job-hob {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* Chỉnh 4 icon lên 1 hàng */
+.job-icon {
+  display: flex;
+  gap: 15px;
+}
+/* Chỉnh tạo border xanh, chỉnh màu icon đồng thời căn chỉnh
+icon vào giữa border */
+.job-icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0096ff;
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  border: 1px solid #0096ff;
+  border-radius: 50%;
+}
+/* Đưa các nội dung lên 1 dòng và chỉnh sửa cỡ chữ */
+.job-con-hob {
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* chỉnh màu chữ của nội dung 2 cột kỹ năng và ngôn ngũ, đồng
+thời dịch sang bên phải sao cho giống với thiết kế */
+.job-language,
+.job-skill {
+  margin-left: 20px;
+  color: #3f3f3f;
+}
+/* Chỉnh các dấu gạch chân màu xanh bên dưới */
+.span-blue {
+  display: inline-block;
+  height: 2px;
+  width: 45px;
+  margin: 7px 10px 20px 0;
+  background-color: #199cdb;
+}
+/* Chỉnh các dấu gạch chân màu xám bên dưới */
+.span-gray {
+  display: inline-block;
+  height: 2px;
+  width: 45px;
+  margin: 7px 10px 20px 0;
+  background-color: #808080bd;
+}
+
+/* Chứng chỉ giải thưởng */
+/* chỉnh từ "Chứng chỉ giải thưởng sao cho giống thiết kế" */
+#certificate .section-title {
+  margin-left: 60px;
+  color: #3f3f3f;
+  font-weight: 100;
+}
+/* Chia làm 2 cột 2 dòng và căn giữa 3 item */
+.job-certi {
+  display: grid;
+  grid-template-columns: repeat(2, 475px);
+  grid-template-rows: 110px 150px;
+  justify-content: center;
+}
+/* Chia từng item thành 2 phần, bên trái là hình ảnh, phải là nội dung */
+.job-certi-content {
+  display: flex;
+  gap: 20px;
+}
+/* kẻ border ngang */
+.certi-1,
+.certi-2 {
+  border-bottom: 1px solid #d6c08d;
+}
+/* kẻ border dọc giữa item 1 và item 2 */
+.certi-2 img {
+  padding-left: 10px;
+  border-left: 1px solid #d6c08d;
+}
+/* chỉnh padding sao cho giống với thiết kế */
+.certi-3 {
+  padding-top: 30px;
+}
+
+/* Dự án */
+/* Chỉnh lại margin cho mục Dự án */
+#project .container {
+  padding-bottom: 0;
+}
+/* Căn chỉnh từ "Dự án" sao cho đúng thiết kế */
+#project .section-title {
+  margin-left: 60px;
+  color: #3f3f3f;
+  font-weight: 100;
+}
+/* chia nội dung thành 3 cột 1 hàng và căn giữa */
+.project-content {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 500px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+/* kẻ border cho các nội dung bên dưới hình ảnh đồng thời
+căn chỉnh đường link sang trang Project */
+.proj {
+  border: 1px solid #0000001a;
+  border-collapse: collapse;
+  align-items: center;
+  justify-content: space-between;
+}
+.proj a {
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #199cdb;
+  color: #fff;
+  border-radius: 20px;
+}
+.proj a:hover {
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+  background-color: #ff9900;
+  box-shadow: 0px 0px 5px blue;
+}
+/* Chỉnh nội dung của dòng "CV cá nhân" và 2 dòng tương tự
+trong 2 item còn lại */
+.proj-cv {
+  padding: 10px;
+  color: #3f3f3f;
+}
+/* Chỉnh nội dung lên 1 hàng và căn giữa theo chiều ngang
+của cả 3 dòng "2023 funix developer" */
+.proj-skill {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+}
+/* Chỉnh border, background của chữ "2023" sao cho đúng thiết kế */
+.bg-border {
+  padding: 5px 10px;
+  background-color: #0096ff;
+  border-radius: 20px;
+  color: #fff;
+}
+.proj-skill .flex {
+  gap: 10px;
+}
+/* Chỉnh khoảng cách các các icon và nội dung bên phải */
+.proj-skill i {
+  padding-right: 5px;
+}
+/* Kẻ border-bottom cho các dòng tr của thẻ table */
+.proj-table tr {
+  border-bottom: 1px solid #0000001a;
+}
+/* chỉnh khoảng cách các ô td trong thẻ table sao cho giống thiết kế */
+.proj-table td {
+  padding: 10px 5px;
+}
+/* Chỉnh các từ "Mô tả", "Nhiệm vụ", "Công nghệ" lên dòng trên sao cho
+đúng với thiết kế*/
+.td-top {
+  vertical-align: top;
+}
+/* Đoạn này do nội dung của item thứ 2 dài hơn iteam 1 và 3
+nên em thêm độ rộng ô cuối cùng của 2 item 1 và 3 sao cho bằng với
+item 2 và giống với thiết kế đồng thời dùng position để chỉnh nội dung
+lên phía trên của ô*/
+.tr-bot-1,
+.tr-bot-3 {
+  position: relative;
+  height: 50px;
+}
+/* Chỉnh từ "Công nghệ lên trên" */
+.td-bot {
+  position: absolute;
+  top: 0;
+}
+/* Chỉnh từ "HTML, CSS" lên trên và sang phải sao cho giống với thiết kế */
+.tr-bot-1 td:last-child,
+.tr-bot-3 td:last-child {
+  position: absolute;
+  top: 0;
+  left: 74px;
+}
+/* Phần footer */
+/* Đưa các thẻ lên 1 dòng và căn giữa */
+#footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Xóa dấu gạch chân và chỉnh màu chữ */
+#footer a:link,
+#footer a:visited {
+  text-decoration: none;
+  color: #3f3f3f;
+}
+/* Thêm và chỉnh sửa border cho icon, đồng thời căn chỉnh để icon vào
+giữa border */
+#footer i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background-color: #199cdb;
+  color: #fff;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+.link-icon {
+  align-items: center;
+  gap: 5px;
+}

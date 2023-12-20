@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Charter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+      .h6 {
+        font-size: 14px;
+      }
+      .container a {
+        background-color: #0000ff;
+        border: 1px solid blue;
+      }
+      .container a:hover {
+        font-weight: bold;
+        border-bottom: 2px solid blue;
+        background-color: #ff9900;
+        box-shadow: 0px 0px 5px blue;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: 400px 400px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+      }
+      .timeline {
+        grid-column: 3 / -1;
+        grid-row: 1 / -1;
+      }
+      .goals,
+      .team,
+      .scopes,
+      .primary,
+      .timeline {
+        background-color: #f0faff;
+        border: 15px solid #0000ff;
+      }
+      .goals,
+      .team,
+      .scopes,
+      .primary {
+        border-right: none;
+      }
+      .goals,
+      .team {
+        border-bottom: none;
+      }
+      .title {
+        color: rgb(0, 0, 255);
+      }
+      .goals-width-icon {
+        width: 15%;
+      }
+      .team-width-icon {
+        width: 20%;
+      }
+      .primary-width-icon {
+        width: 50%;
+      }
+      .scopes-content {
+        gap: 40px;
+      }
+      .number-border {
+        font-size: 18px;
+        background-color: #ab74ff;
+        border: 1px solid #660066;
+        padding: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 0.25rem;
+      }
+      .project-border {
+        border-bottom: 1px dashed #6565ff;
+      }
+
+      @media screen and (max-width: 576px) {
+      }
+      @media screen and (max-width: 768px) {
+        .grid {
+          display: block;
+        }
+        .goals,
+        .team,
+        .scopes,
+        .primary {
+          border-right: 15px solid #0000ff;
+        }
+        .scopes,
+        .primary {
+          border-bottom: none;
+        }
+        .goals-width-icon,
+        .team-width-icon,
+        .primary-width-icon {
+          width: 100%;
+        }
+        .scopes .out-class {
+          margin-top: 0.25rem;
+        }
+        .number-border {
+          margin-left: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <a
+        href="index.html"
+        class="text-decoration-none text-light rounded-pill mt-3 p-2"
+        >Quay Lại</a
+      >
+    </div>
+    <div class="container-fluid mt-3">
+      <div class="grid">
+        <!-- Goals -->
+        <section class="goals d-flex flex-column">
+          <div class="m-3">
+            <div class="title h5 pb-3 border-bottom fw-bold">Goals</div>
+            <div class="d-md-flex border-bottom mb-1">
+              <div class="goals-width-icon text-center">
+                <i class="fa-solid fa-flag-checkered h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column ms-2">
+                <p class="h6 pt-1 mb-0 fw-bold">Goal 1</p>
+                <p class="mb-2">
+                  <small>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Odit quo laborum quibusdam consectetur, voluptate
+                    voluptatibus.
+                  </small>
+                </p>
+              </div>
+            </div>
+            <div class="d-md-flex border-bottom mb-1">
+              <div class="goals-width-icon text-center">
+                <i class="fa-solid fa-flag-checkered h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column ms-2">
+                <p class="h6 pt-1 mb-0 fw-bold">Goal 2</p>
+                <p class="mb-2">
+                  <small>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Odit quo laborum quibusdam consectetur, voluptate
+                    voluptatibus.
+                  </small>
+                </p>
+              </div>
+            </div>
+            <div class="d-md-flex border-bottom">
+              <div class="goals-width-icon text-center">
+                <i class="fa-solid fa-flag-checkered h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column ms-2">
+                <p class="h6 pt-1 mb-0 fw-bold">Goal 3</p>
+                <p class="mb-2">
+                  <small>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Odit quo laborum quibusdam consectetur, voluptate
+                    voluptatibus.
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team -->
+        <section class="team d-flex flex-column">
+          <div class="m-3">
+            <div class="title h5 pb-3 fw-bold border-bottom">Team</div>
+            <div class="d-md-flex">
+              <div class="team-width-icon text-center">
+                <i class="fa-solid fa-user h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column">
+                <p class="h6 fw-bold">Member 01</p>
+                <p>Name: Nguyen Van A</p>
+              </div>
+            </div>
+            <div class="d-md-flex">
+              <div class="team-width-icon text-center">
+                <i class="fa-solid fa-user h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column">
+                <p class="h6 fw-bold">Member 02</p>
+                <p>Name: Nguyen Van B</p>
+              </div>
+            </div>
+            <div class="d-md-flex">
+              <div class="team-width-icon text-center">
+                <i class="fa-solid fa-user h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column">
+                <p class="h6 fw-bold">Member 03</p>
+                <p>Name: Nguyen Van C</p>
+              </div>
+            </div>
+            <div class="d-md-flex">
+              <div class="team-width-icon text-center">
+                <i class="fa-solid fa-user h5 pt-2"></i>
+              </div>
+              <div class="d-flex flex-column">
+                <p class="h6 fw-bold">Member 04</p>
+                <p>Name: Nguyen Van D</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Scopes -->
+        <section class="scopes d-flex flex-column">
+          <div class="m-3">
+            <div class="title h5 pb-3 fw-bold border-bottom">Scopes</div>
+            <div class="row g-5">
+              <div class="col-md ms-3">
+                <p class="h4 fw-bold mb-4">IN</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nulla, totam!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nulla, totam!
+                </p>
+              </div>
+              <div class="out-class col-md ms-3">
+                <p class="h4 fw-bold mb-4">OUT</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nulla, totam!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nulla, totam!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Primary -->
+        <section class="primary d-flex flex-column">
+          <div class="m-3">
+            <div class="title h5 pb-3 fw-bold border-bottom">Primary</div>
+            <div class="d-flex flex-column">
+              <div class="d-md-flex">
+                <div class="primary-width-icon text-center">
+                  <i class="fa-sharp fa-solid fa-circle-question h5 pt-2"></i>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum ea distinctio qui, earum sed praesentium.
+                  </p>
+                </div>
+              </div>
+              <div class="d-md-flex">
+                <div class="primary-width-icon text-center">
+                  <i class="fa-sharp fa-solid fa-circle-question h5 pt-2"></i>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum ea distinctio qui, earum sed praesentium.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline d-flex flex-column timeline">
+          <div class="m-3">
+            <div class="title h5 pb-3 fw-bold border-bottom">Timeline</div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">01</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Start</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">02</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Date</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">03</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Date</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">04</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Date</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">05</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Date</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">06</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Date</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column pt-2 mb-4">
+              <div class="d-md-flex">
+                <div
+                  class="w-25 d-flex justify-content-md-center align-items-center"
+                >
+                  <p class="number-border rounded-circle text-light">07</p>
+                </div>
+                <div class="project-border w-100 ps-2">
+                  <p class="h6 fw-bold">Project Date</p>
+                  <p class="mb-2">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
